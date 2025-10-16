@@ -24,6 +24,10 @@ main div button {
   padding: 5px 8px;
   border-radius: 10px;
 }
+
+h1 {
+  text-align: center;
+}
 `;
 
 export default styles;

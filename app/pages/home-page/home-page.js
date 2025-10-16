@@ -6,6 +6,8 @@ import styles from './home-page.css'
 
 import { toggleLanguage } from '../../utils/generic-functions'
 
+import '../../components/audiophile-button/audiophile-button'
+
 export class HomePage extends CorePage {
   constructor () {
     super()
@@ -27,8 +29,11 @@ export class HomePage extends CorePage {
         <section>
           <h1>${this.t('home-page.title')}</h1>
           <div>
-            <button @click="${this.toggleLanguage}">${this.t('home-page.button.lang')}</button>
-            <button @click="${this.toggleDarkMode}">${this.t('home-page.button.dark-mode')}</button>
+            <audiophile-button
+              @click="${this.toggleLanguage}"
+            >
+              ${this.t('home-page.button.lang')}
+            </audiophile-button>
           </div>
         </section>
       </main>

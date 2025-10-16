@@ -4,7 +4,7 @@
     "languages.en-us": "Inglés",
 
     "home-page.title": "Audiophile | Store",
-    "home-page.button.lang": "Cambiar idioma",
+    "home-page.button.lang": "CAMBIAR IDIOMA",
     "home-page.button.dark-mode": "Modo obscuro"
   },
   "en-US": {
@@ -12,7 +12,7 @@
     "languages.en-us": "English",
 
     "home-page.title": "Audiophile | Store",
-    "home-page.button.lang": "Change language",
+    "home-page.button.lang": "CHANGE LANGUAGE",
     "home-page.button.dark-mode": "Dark mode"
   }
 }
