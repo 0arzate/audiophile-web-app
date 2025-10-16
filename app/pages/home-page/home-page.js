@@ -4,14 +4,13 @@ import { CorePage } from '../../utils'
 
 import styles from './home-page.css'
 
-import { toggleDarkMode, toggleLanguage } from '../../utils/generic-functions'
+import { toggleLanguage } from '../../utils/generic-functions'
 
 export class HomePage extends CorePage {
   constructor () {
     super()
 
     this.toggleLanguage = toggleLanguage
-    this.toggleDarkMode = toggleDarkMode
   }
 
   static get is () {
