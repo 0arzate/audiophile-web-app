@@ -4,15 +4,13 @@
     "languages.en-us": "Inglés",
 
     "home-page.title": "Audiophile | Store",
-    "home-page.button.lang": "CAMBIAR IDIOMA",
-    "home-page.button.dark-mode": "Modo obscuro"
+    "home-page.button.lang": "CAMBIAR IDIOMA"
   },
   "en-US": {
     "languages.es-mx": "Spanish",
     "languages.en-us": "English",
 
     "home-page.title": "Audiophile | Store",
-    "home-page.button.lang": "CHANGE LANGUAGE",
-    "home-page.button.dark-mode": "Dark mode"
+    "home-page.button.lang": "CHANGE LANGUAGE"
   }
 }
