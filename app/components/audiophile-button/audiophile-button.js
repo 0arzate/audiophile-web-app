@@ -3,11 +3,13 @@ import { LocalizeMixin } from '@open-cells/localize'
 
 import styles from './audiophile-button.css'
 
+import '../fontawesome-icon/fontawesome-icon'
+
 export class AudiophileButton extends LocalizeMixin(LitElement) {
   constructor () {
     super()
 
-    this.buttonType = 'default'
+    this.type = 'default'
   }
 
   static get is () {
@@ -20,17 +22,21 @@ export class AudiophileButton extends LocalizeMixin(LitElement) {
 
   static get properties () {
     return {
-      buttonType: { type: String, attribute: 'button-type' }
+      type: { type: String },
+      icon: { type: Object }
     }
   }
 
-  get buttonStyle () {
-    return this.buttonType
+  get isIconType () {
+    return this.type === 'icon'
   }
 
   render () {
     return html`
-      <button class="${this.buttonStyle}"><slot></slot></button>
+      <button class="${this.type}">
+        <slot></slot>
+        <fontawesome-icon ?hidden="${!this.isIconType}" .icon="${this.icon}"></fontawesome-icon>
+      </button>
     `
   }
 }

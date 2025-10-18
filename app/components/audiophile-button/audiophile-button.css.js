@@ -36,6 +36,23 @@ button:hover {
   background-color: var(--color-black);
   color: var(--color-white);
 }
+
+.icon {
+  background-color: transparent;
+  min-width: min-content;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.icon:hover {
+  color: var(--color-orange);
+}
+
+fontawesome-icon {
+  --icon-size: 1rem;
+  --icon-color: var(--color-orange);
+}
 `;
 
 export default styles;
