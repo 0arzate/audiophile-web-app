@@ -10,6 +10,12 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
     super()
 
     this.label = ''
+    this.placeholder = ''
+    this.value = ''
+    this.name = ''
+    this.type = 'text'
+    this.pattern = '.*'
+    this.isValid = true
   }
 
   static get is () {
@@ -23,32 +29,32 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
   static get properties () {
     return {
       label: { type: String },
-      placeholder: { type: String }
+      placeholder: { type: String },
+      isValid: { type: Boolean },
+      value: { type: String },
+      name: { type: String },
+      pattern: { type: String },
+      type: { type: String }
     }
   }
 
-  firstUpdated () {
-    const input = this.renderRoot.querySelector('input')
-    input.addEventListener('invalid', (ev) => {
-      console.log('Input value:', input.value, ev)
-    })
-  }
-
-  validateInput (e) {
-    const isValid = e.target.checkValidity()
-
-    if (!isValid) {
-      return false
-    }
+  validateInput (ev) {
+    this.isValid = ev.target.checkValidity()
+    this.value = ev.target.value
   }
 
   render () {
     return html`
       <label>
-        ${this.label}
+        <div>
+          <p>${this.label}</p>
+          <p ?hidden="${this.isValid}">${this.t('audiophile-input.label.error')}</p>
+        </div>
         <input
+          .type="${this.type}"
+          name="${this.name}"
           placeholder="${this.placeholder}"
-          pattern="^[0-9]+$"
+          pattern="${this.pattern}"
           @input="${this.validateInput}"
         />
       </label>
