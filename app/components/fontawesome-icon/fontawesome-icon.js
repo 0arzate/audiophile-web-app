@@ -25,7 +25,7 @@ export class FontawesomeIcon extends LitElement {
   }
 
   render () {
-    return html`${icon(this.icon).node}`
+    return html`${icon(this.icon)?.node}`
   }
 }
 

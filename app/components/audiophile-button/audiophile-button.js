@@ -10,6 +10,7 @@ export class AudiophileButton extends LocalizeMixin(LitElement) {
     super()
 
     this.type = 'default'
+    this.icon = {}
   }
 
   static get is () {
