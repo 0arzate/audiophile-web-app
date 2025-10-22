@@ -7,6 +7,7 @@ import styles from './home-page.css'
 import { toggleLanguage } from '../../utils/generic-functions'
 
 import '../../components/audiophile-button/audiophile-button'
+import '../../components/audiophile-input/audiophile-input'
 
 export class HomePage extends CorePage {
   constructor () {
@@ -30,6 +31,8 @@ export class HomePage extends CorePage {
           <h1>${this.t('home-page.title')}</h1>
           <div>
             <audiophile-button
+              type="submit"
+              variant="ghost"
               @click="${this.toggleLanguage}"
             >
               ${this.t('home-page.button.lang')}
