@@ -16,6 +16,7 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
     this.type = 'text'
     this.pattern = '.*'
     this.isValid = true
+    this.required = false
   }
 
   static get is () {
@@ -30,6 +31,7 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
     return {
       label: { type: String },
       placeholder: { type: String },
+      required: { type: Boolean },
       isValid: { type: Boolean },
       value: { type: String },
       name: { type: String },
@@ -43,6 +45,11 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
     this.value = ev.target.value
   }
 
+  resetValue () {
+    this.value = ''
+    this.isValid = true
+  }
+
   render () {
     return html`
       <label>
@@ -51,6 +58,8 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
           <p ?hidden="${this.isValid}">${this.t('audiophile-input.label.error')}</p>
         </div>
         <input
+          ?required="${this.required}"
+          .value="${this.value}"
           .type="${this.type}"
           name="${this.name}"
           placeholder="${this.placeholder}"
