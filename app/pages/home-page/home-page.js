@@ -24,20 +24,25 @@ export class HomePage extends CorePage {
     return styles
   }
 
+  submitForm (ev) {
+    ev.preventDefault()
+    console.log('Form submitted')
+  }
+
   render () {
     return html`
       <main>
         <section>
           <h1>${this.t('home-page.title')}</h1>
-          <div>
+          <form @submit="${this.submitForm}">
             <audiophile-button
               type="submit"
               variant="ghost"
-              @click="${this.toggleLanguage}"
             >
               ${this.t('home-page.button.lang')}
             </audiophile-button>
-          </div>
+            <audiophile-input pattern="^[0-9]+$" placeholder="Solo numeros" required></audiophile-input>
+          </form>
         </section>
       </main>
     `

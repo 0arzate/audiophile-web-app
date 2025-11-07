@@ -42,7 +42,6 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
 
   validateInput (ev) {
     this.isValid = ev.target.checkValidity()
-    this.value = ev.target.value
   }
 
   resetValue () {
