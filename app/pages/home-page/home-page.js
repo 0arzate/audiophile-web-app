@@ -43,6 +43,7 @@ export class HomePage extends CorePage {
             </audiophile-button>
             <audiophile-input type="number" placeholder="Solo numeros" required></audiophile-input>
             <audiophile-input pattern="[A-Za-zÑñ ]+" placeholder="Solo letras"></audiophile-input>
+            <audiophile-input type="radio" label="e-Money"></audiophile-input>
           </form>
         </section>
       </main>

@@ -31,15 +31,10 @@ div p:last-child {
 input {
   min-width: 56px;
   padding: 18px 24px;
-  margin-top: 9px;
   border-radius: 8px;
   font-size: 1.4rem;
   letter-spacing: -0.025rem;
   font-weight: bold;
-}
-
-input:placeholder-shown {
-  border: 1px solid #CFCFCF;
 }
 
 input::placeholder {
@@ -55,11 +50,39 @@ input:focus {
   outline: 1px solid var(--color-orange);
 }
 
+input:placeholder-shown {
+  border: 1px solid #CFCFCF;
+}
+
 input.invalid {
   border: 2px solid #CD2C2C;
 }
 
 input:not(:placeholder-shown):valid {
+  border: 1px solid var(--color-orange);
+}
+
+label:has(input[type=radio]) {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding: 18px;
+  border: 1px solid #CFCFCF;
+  border-radius: 8px;
+}
+
+label:has(input[type=radio]):hover {
+  border-color: var(--color-orange);
+}
+
+label:has(input[type=radio]) input {
+  margin: 0px;
+  min-width: min-content;
+  margin-right: 16px;
+  outline: none;
+  accent-color: var(--color-orange);
+}
+
+label:has(input[type=radio]:checked) {
   border: 1px solid var(--color-orange);
 }
 `;
