@@ -41,7 +41,8 @@ export class HomePage extends CorePage {
             >
               ${this.t('home-page.button.lang')}
             </audiophile-button>
-            <audiophile-input pattern="^[0-9]+$" placeholder="Solo numeros" required></audiophile-input>
+            <audiophile-input type="number" placeholder="Solo numeros" required></audiophile-input>
+            <audiophile-input pattern="[A-Za-zÑñ ]+" placeholder="Solo letras"></audiophile-input>
           </form>
         </section>
       </main>

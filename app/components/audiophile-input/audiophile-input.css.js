@@ -33,10 +33,13 @@ input {
   padding: 18px 24px;
   margin-top: 9px;
   border-radius: 8px;
-  border: 1px solid #CFCFCF;
   font-size: 1.4rem;
   letter-spacing: -0.025rem;
   font-weight: bold;
+}
+
+input:placeholder-shown {
+  border: 1px solid #CFCFCF;
 }
 
 input::placeholder {
@@ -52,12 +55,12 @@ input:focus {
   outline: 1px solid var(--color-orange);
 }
 
-input:valid {
-  border: 1px solid var(--color-orange);
+input.invalid {
+  border: 2px solid #CD2C2C;
 }
 
-input:invalid {
-  border: 2px solid #CD2C2C;
+input:not(:placeholder-shown):valid {
+  border: 1px solid var(--color-orange);
 }
 `;
 

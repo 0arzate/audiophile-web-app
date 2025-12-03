@@ -49,6 +49,10 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
     this.isValid = true
   }
 
+  get validationClass () {
+    return this.isValid ? '' : 'invalid'
+  }
+
   render () {
     return html`
       <label>
@@ -57,6 +61,7 @@ export class AudiophileInput extends LocalizeMixin(LitElement) {
           <p ?hidden="${this.isValid}">${this.t('audiophile-input.label.error')}</p>
         </div>
         <input
+          class="${this.validationClass}"
           ?required="${this.required}"
           .value="${this.value}"
           .type="${this.type}"
