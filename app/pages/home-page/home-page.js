@@ -8,6 +8,7 @@ import { toggleLanguage } from '../../utils/generic-functions'
 
 import '../../components/audiophile-button/audiophile-button'
 import '../../components/audiophile-input/audiophile-input'
+import '../../components/audiophile-input-counter/audiophile-input-counter'
 
 export class HomePage extends CorePage {
   constructor () {
@@ -44,6 +45,7 @@ export class HomePage extends CorePage {
             <audiophile-input type="number" placeholder="Solo numeros" required></audiophile-input>
             <audiophile-input pattern="[A-Za-zÑñ ]+" placeholder="Solo letras"></audiophile-input>
             <audiophile-input type="radio" label="e-Money"></audiophile-input>
+            <audiophile-input-counter></audiophile-input-counter>
           </form>
         </section>
       </main>
