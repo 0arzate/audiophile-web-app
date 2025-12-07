@@ -1,20 +1,28 @@
 {
   "es-MX": {
+    "pages.home.title": "Inicio",
+
     "languages.es-mx": "Español",
     "languages.en-us": "Inglés",
 
     "home-page.title": "Audiophile | Store",
     "home-page.button.lang": "CAMBIAR IDIOMA",
 
-    "audiophile-input.label.error": "Formato incorrecto"
+    "audiophile-input.label.error": "Formato incorrecto",
+
+    "audiophile-header.title.logo": "Audiophile"
   },
   "en-US": {
+    "pages.home.title": "Home",
+
     "languages.es-mx": "Spanish",
     "languages.en-us": "English",
 
     "home-page.title": "Audiophile | Store",
     "home-page.button.lang": "CHANGE LANGUAGE",
 
-    "audiophile-input.label.error": "Wrong format"
+    "audiophile-input.label.error": "Wrong format",
+
+    "audiophile-header.title.logo": "Audiophile"
   }
 }

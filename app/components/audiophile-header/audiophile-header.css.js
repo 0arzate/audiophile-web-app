@@ -1,0 +1,80 @@
+
+import { css } from 'lit';
+
+export const styles = css`
+
+h2,
+nav,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  background-color: #0E0E0E;
+}
+
+header {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  color: var(--color-white);
+  padding: 36px 5px;
+  grid-template-areas: "logo nav cart";
+}
+
+nav {
+  grid-area: nav;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+nav ul li:hover {
+  color: var(--color-orange);
+}
+
+img {
+  grid-area: logo;
+  width: 143px;
+  height: 25px;
+}
+
+fontawesome-icon {
+  grid-area: cart;
+  cursor: pointer;
+  --icon-size: 24px;
+  text-align: right;
+}
+
+fontawesome-icon:hover {
+  color: var(--color-orange);
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  header {
+    max-width: 689px;
+    grid-template-areas: "nav logo cart";
+    grid-template-columns: 16px 1fr 1fr;
+    gap: 42px;
+  }
+}
+@media (max-width: 599px) {
+  header {
+    max-width: 327px;
+    grid-template-areas: "nav logo cart";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+`;
+
+export default styles;
