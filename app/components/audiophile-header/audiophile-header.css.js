@@ -16,18 +16,33 @@ section {
 }
 
 header {
-  max-width: 1110px;
+  max-width: 80%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   color: var(--color-white);
-  padding: 36px 5px;
+  padding: 36px 0px;
   grid-template-areas: "logo nav cart";
+}
+header .icon-shopping-cart {
+  margin: 0px;
+  margin-left: auto;
+  grid-area: cart;
+  cursor: pointer;
+  --icon-size: 24px;
+  text-align: right;
+}
+header .icon-shopping-cart:hover {
+  color: var(--color-orange);
 }
 
 nav {
   grid-area: nav;
+}
+nav .icon-bars {
+  display: none;
+  --icon-size: 15px;
 }
 nav ul {
   list-style: none;
@@ -38,6 +53,7 @@ nav ul li {
   font-weight: bold;
   line-height: 2.5rem;
   letter-spacing: 0.2rem;
+  max-width: min-content;
 }
 nav ul li:hover {
   color: var(--color-orange);
@@ -49,28 +65,26 @@ img {
   height: 25px;
 }
 
-fontawesome-icon {
-  grid-area: cart;
-  cursor: pointer;
-  --icon-size: 24px;
-  text-align: right;
-}
-
-fontawesome-icon:hover {
-  color: var(--color-orange);
-}
-
-@media (min-width: 600px) and (max-width: 899px) {
+@media (max-width: 899px) {
   header {
-    max-width: 689px;
     grid-template-areas: "nav logo cart";
     grid-template-columns: 16px 1fr 1fr;
     gap: 42px;
   }
+  nav {
+    height: 15px;
+    width: 15px;
+    margin: auto 0px;
+  }
+  nav .icon-bars {
+    display: inline-block;
+  }
+  nav ul {
+    display: none;
+  }
 }
 @media (max-width: 599px) {
   header {
-    max-width: 327px;
     grid-template-areas: "nav logo cart";
     grid-template-columns: repeat(3, 1fr);
   }

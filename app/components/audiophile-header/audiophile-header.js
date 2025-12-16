@@ -6,7 +6,7 @@ import styles from './audiophile-header.css'
 import { routes } from '../../router/routes'
 
 import '../fontawesome-icon/fontawesome-icon'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 export class AudiophileHeader extends LocalizeMixin(LitElement) {
   static get is () {
@@ -38,12 +38,13 @@ export class AudiophileHeader extends LocalizeMixin(LitElement) {
             alt="audiophile logo"
           >
           <nav>
+            <fontawesome-icon class="icon-bars" .icon="${faBars}"></fontawesome-icon>
             <ul>
               ${this.renderRoutes}
             </ul>
           </nav>
 
-          <fontawesome-icon .icon="${faShoppingCart}"></fontawesome-icon>
+          <fontawesome-icon class="icon-shopping-cart" .icon="${faShoppingCart}"></fontawesome-icon>
         </header>
       </section>
       `

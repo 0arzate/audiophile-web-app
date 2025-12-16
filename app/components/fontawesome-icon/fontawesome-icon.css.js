@@ -6,6 +6,8 @@ export const styles = css`
 :host {
   --icon-size: 3.5rem;
   --icon-color: var(--text-color);
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 svg {
