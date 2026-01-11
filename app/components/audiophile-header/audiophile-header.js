@@ -1,12 +1,13 @@
-import { html, LitElement } from 'lit'
+import { html, LitElement, nothing } from 'lit'
 import { LocalizeMixin } from '@open-cells/localize'
+import { faBars, faChevronRight, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './audiophile-header.css'
 
 import { routes } from '../../router/routes'
 
 import '../fontawesome-icon/fontawesome-icon'
-import { faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import '../audiophile-button/audiophile-button'
 
 export class AudiophileHeader extends LocalizeMixin(LitElement) {
   static get is () {
@@ -29,6 +30,30 @@ export class AudiophileHeader extends LocalizeMixin(LitElement) {
     `)
   }
 
+  get renderMobileRoutes () {
+    return routes.map((route) => {
+      if (route.name === 'home') {
+        return nothing
+      }
+
+      return html`
+        <li>
+          <img class="${route.name}" src="${route.navigationMobileImage}" alt="headphones" />
+          <p>${this.t(route.label)}</p>
+          <audiophile-button variant="icon" .icon="${faChevronRight}">
+            <span>SHOP</span>
+          </audiophile-button>
+        </li>
+      `
+    })
+  }
+
+  toggleMobileMenu () {
+    const mobileNav = this.renderRoot.querySelector('.navigation-mobile')
+
+    mobileNav.classList.toggle('open-mobile-menu')
+  }
+
   render () {
     return html`
       <section>
@@ -38,10 +63,18 @@ export class AudiophileHeader extends LocalizeMixin(LitElement) {
             alt="audiophile logo"
           >
           <nav>
-            <fontawesome-icon class="icon-bars" .icon="${faBars}"></fontawesome-icon>
+            <fontawesome-icon
+              class="icon-bars"
+              .icon="${faBars}"
+              @click="${this.toggleMobileMenu}"
+            ></fontawesome-icon>
             <ul>
               ${this.renderRoutes}
             </ul>
+          </nav>
+
+          <nav class="navigation-mobile">
+            ${this.renderMobileRoutes}
           </nav>
 
           <fontawesome-icon class="icon-shopping-cart" .icon="${faShoppingCart}"></fontawesome-icon>
