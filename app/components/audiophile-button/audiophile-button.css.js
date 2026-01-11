@@ -13,6 +13,10 @@ button {
   letter-spacing: 1px;
 }
 
+::slotted(*) {
+  opacity: 0.5;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -38,11 +42,16 @@ button:hover {
 }
 
 .icon {
+  all: unset;
+  color: var(--color-black);
+  line-height: 1;
   background-color: transparent;
   min-width: min-content;
   display: flex;
   align-items: center;
   gap: 13px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
 }
 
 .icon:hover {
