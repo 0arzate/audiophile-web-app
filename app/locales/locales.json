@@ -1,6 +1,9 @@
 {
   "es-MX": {
     "pages.home.title": "Inicio",
+    "pages.headphones.title": "Headphones",
+    "pages.speakers.title": "Speakers",
+    "pages.earphones.title": "Earphones",
 
     "languages.es-mx": "Español",
     "languages.en-us": "Inglés",
@@ -14,6 +17,9 @@
   },
   "en-US": {
     "pages.home.title": "Home",
+    "pages.headphones.title": "Headphones",
+    "pages.speakers.title": "Speakers",
+    "pages.earphones.title": "Earphones",
 
     "languages.es-mx": "Spanish",
     "languages.en-us": "English",
