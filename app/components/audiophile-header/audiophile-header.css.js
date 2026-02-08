@@ -132,6 +132,10 @@ img {
   transform: translateX(0);
 }
 
+.active-tab {
+  color: var(--color-orange);
+}
+
 @media (max-width: 899px) {
   .navigation-mobile {
     display: flex;
@@ -154,7 +158,7 @@ img {
     display: none;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 480px) {
   .navigation-mobile {
     flex-direction: column;
     padding-left: 24px;

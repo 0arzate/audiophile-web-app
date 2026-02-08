@@ -10,7 +10,7 @@ export const routes = [
     }
   },
   {
-    path: '/',
+    path: '/headphones',
     name: 'headphones',
     component: 'home-page',
     label: 'pages.headphones.title',
@@ -20,7 +20,7 @@ export const routes = [
     }
   },
   {
-    path: '/',
+    path: '/speakers',
     name: 'speakers',
     component: 'home-page',
     label: 'pages.speakers.title',
@@ -30,7 +30,7 @@ export const routes = [
     }
   },
   {
-    path: '/',
+    path: '/earphones',
     name: 'earphones',
     component: 'home-page',
     label: 'pages.earphones.title',

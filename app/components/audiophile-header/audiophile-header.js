@@ -24,10 +24,15 @@ export class AudiophileHeader extends LocalizeMixin(LitElement) {
 
   get renderRoutes () {
     return routes.map((route) => html`
-      <li>
+      <li class="${this.isCurrentRoute(route) ? 'active-tab' : ''}">
         ${this.t(route.label)}
       </li>
     `)
+  }
+
+  isCurrentRoute (route) {
+    const currentRoute = window.location.pathname
+    return route.path === currentRoute
   }
 
   get renderMobileRoutes () {
